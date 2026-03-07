@@ -7,8 +7,8 @@ import MonthlyFilter from "@/components/dashboard/MonthlyFilter";
 import TransactionForm from "@/components/finance/TransactionForm";
 import TransactionList from "@/components/finance/TransactionList";
 import ExpensePieChart from "@/components/charts/ExpensePieChart";
-import MonthlyBudgetInput from "@/components/finance/MonthlyBudgetInput";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import BudgetProgress from "@/components/dashboard/BudgetProgress";
 
 export default function Page() {
 	const {
@@ -19,6 +19,7 @@ export default function Page() {
 		setMonth,
 		monthlyBudget,
 		setMonthlyBudget,
+		budgets,
 		setBudget,
 	} = useFinanceStore();
 
@@ -31,31 +32,48 @@ export default function Page() {
 		.reduce((sum, t) => sum + t.amount, 0);
 
 	return (
-		<main className="max-w-7xl mx-auto p-10 space-y-8">
-			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				<BudgetSummaryCard income={income} expenses={expenses} />
-				<Card>
+		<main className="max-w-4xl mx-auto p-10 space-y-8">
+			{/* <div className="grid lg:grid-cols-4 gap-8"> */}
+				{/* Budget Summary Card */}
+				<div className="grid lg:col-span-2">
+					<BudgetSummaryCard
+						monthlyBudget={monthlyBudget}
+						income={income}
+						expenses={expenses}
+					/>
+				</div>
+
+				{/* Budget Manager */}
+				<Card className="grid lg:col-span-2">
 					<CardHeader>
-						<CardTitle>Monthly Budget</CardTitle>
+						<CardTitle>Budget Manager</CardTitle>
 					</CardHeader>
 					<CardContent>
-						<MonthlyBudgetInput
+						<BudgetManager
+							transactions={transactions}
+							budgets={budgets}
+							setBudget={setBudget}
 							monthlyBudget={monthlyBudget}
 							setMonthlyBudget={setMonthlyBudget}
 						/>
 					</CardContent>
 				</Card>
-				<Card>
+			{/* </div> */}
+
+			{/* <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"> */}
+				{/* Expense Breakdown/piechart */}
+				{/* <Card className="">
 					<CardHeader>
-						<CardTitle>Category Budget</CardTitle>
+						<CardTitle>Expense Breakdown</CardTitle>
 					</CardHeader>
 					<CardContent>
-						<BudgetManager setBudget={setBudget} />
+						<ExpensePieChart transactions={transactions} />
 					</CardContent>
 				</Card>
-			</div>
+			</div> */}
 
 			<div className="grid gap-8 md:grid-cols-2">
+				{/* Expense Breakdown/piechart */}
 				<Card>
 					<CardHeader>
 						<CardTitle>Expense Breakdown</CardTitle>
@@ -64,7 +82,8 @@ export default function Page() {
 						<ExpensePieChart transactions={transactions} />
 					</CardContent>
 				</Card>
-				<Card>
+				{/* Add Transactions form */}
+				<Card className="">
 					<CardHeader>
 						<CardTitle>Add New Transaction</CardTitle>
 					</CardHeader>

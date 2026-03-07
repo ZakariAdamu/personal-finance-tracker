@@ -44,10 +44,13 @@ export function useFinanceStore() {
 		saveBudgets(updated);
 	};
 
-	const setMonthlyBudget = (budget: number) => {
+	const setMonthlyBudget = (budget: number, options?: { silent?: boolean }) => {
 		setMonthlyBudgetState(budget);
 		saveMonthlyBudget(budget);
-		toast("Monthly budget updated successfully.");
+
+		if (!options?.silent) {
+			toast("Monthly budget updated successfully.");
+		}
 	};
 
 	const filteredTransactions = month
