@@ -69,14 +69,25 @@ export default function BudgetManager({
 			limit: Number(budget.limit),
 		};
 
-		if (!updatedBudget.category || updatedBudget.limit <= 0) {
+		if (
+			!updatedBudget.category ||
+			!Number.isFinite(updatedBudget.limit) ||
+			updatedBudget.limit <= 0
+		) {
 			return;
 		}
 
 		setBudget(updatedBudget);
 	};
 
-	const sortedBudgets = [...budgets].sort(
+	const validBudgets = budgets.filter(
+		(budget) =>
+			FINANCE_CATEGORIES.includes(budget.category) &&
+			Number.isFinite(budget.limit) &&
+			budget.limit > 0,
+	);
+
+	const sortedBudgets = [...validBudgets].sort(
 		(a, b) =>
 			FINANCE_CATEGORIES.indexOf(a.category) -
 			FINANCE_CATEGORIES.indexOf(b.category),
