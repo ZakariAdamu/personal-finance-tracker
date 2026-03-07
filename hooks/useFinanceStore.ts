@@ -11,6 +11,7 @@ import {
 	saveMonthlyBudget,
 } from "@/lib/financeStorage";
 import { toast } from "sonner";
+import { FINANCE_CATEGORIES } from "@/lib/constants";
 
 export function useFinanceStore() {
 	const [transactions, setTransactions] = useState<Transaction[]>(() =>
@@ -37,8 +38,16 @@ export function useFinanceStore() {
 	};
 
 	const setBudget = (budget: Budget) => {
+		const hasValidCategory = FINANCE_CATEGORIES.includes(budget.category);
+		const hasValidLimit =
+			Number.isFinite(budget.limit) && Number(budget.limit) > 0;
+
+		if (!hasValidCategory || !hasValidLimit) {
+			return;
+		}
+
 		const filtered = budgets.filter((b) => b.category !== budget.category);
-		const updated = [...filtered, budget];
+		const updated = [...filtered, { ...budget, limit: Number(budget.limit) }];
 
 		setBudgets(updated);
 		saveBudgets(updated);

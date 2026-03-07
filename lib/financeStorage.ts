@@ -1,4 +1,5 @@
 import { Transaction, Budget } from "@/types/finance";
+import { FINANCE_CATEGORIES } from "@/lib/constants";
 
 const TRANSACTION_KEY = "finance_transactions";
 const BUDGET_KEY = "finance_budgets";
@@ -19,7 +20,23 @@ export const getBudgets = (): Budget[] => {
 	if (typeof window === "undefined") return [];
 
 	const data = localStorage.getItem(BUDGET_KEY);
-	return data ? JSON.parse(data) : [];
+	if (!data) return [];
+
+	const parsed = JSON.parse(data) as Array<Partial<Budget>>;
+
+	return parsed.filter((budget): budget is Budget => {
+		if (!budget) return false;
+
+		const hasValidCategory = FINANCE_CATEGORIES.includes(
+			budget.category as (typeof FINANCE_CATEGORIES)[number],
+		);
+		const hasValidLimit =
+			typeof budget.limit === "number" &&
+			Number.isFinite(budget.limit) &&
+			budget.limit > 0;
+
+		return hasValidCategory && hasValidLimit;
+	});
 };
 
 export const saveBudgets = (budgets: Budget[]) => {
