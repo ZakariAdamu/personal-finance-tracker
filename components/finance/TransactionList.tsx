@@ -33,7 +33,7 @@ export default function TransactionList({
 			</TableHeader>
 			<TableBody>
 				{transactions.map((t) => (
-					<TableRow key={t.id}>
+					<TableRow key={t.id} className="hover:bg-slate-200">
 						<TableCell>{t.description}</TableCell>
 						<TableCell>{t.category}</TableCell>
 						<TableCell>{t.date}</TableCell>
@@ -41,8 +41,8 @@ export default function TransactionList({
 						<TableCell className="text-right">
 							{formatCurrency(t.amount)}
 						</TableCell>
-						<TableCell>
-							<Button variant="ghost" onClick={() => onDelete(t.id)}>
+						<TableCell className="hover:text-red-600">
+							<Button variant="destructive" onClick={() => onDelete(t.id)}>
 								Delete
 							</Button>
 						</TableCell>

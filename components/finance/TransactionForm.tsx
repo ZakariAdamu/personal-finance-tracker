@@ -63,10 +63,10 @@ export default function TransactionForm({ onAdd }: Props) {
 					<SelectContent
 						position="popper"
 						sideOffset={8}
-						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-popover/95 backdrop-blur-sm shadow-xl supports-[backdrop-filter]:bg-popover/90"
+						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-white shadow-xl supports-[backdrop-filter]:bg-popover/90"
 					>
 						{FINANCE_CATEGORIES.map((cat) => (
-							<SelectItem key={cat} value={cat}>
+							<SelectItem className="hover:bg-gray-200" key={cat} value={cat}>
 								{cat}
 							</SelectItem>
 						))}
@@ -97,15 +97,23 @@ export default function TransactionForm({ onAdd }: Props) {
 					<SelectContent
 						position="popper"
 						sideOffset={8}
-						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-popover/95 backdrop-blur-sm shadow-xl supports-backdrop-filter:bg-popover/90"
+						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-white shadow-xl supports-backdrop-filter:bg-popover/90"
 					>
-						<SelectItem value="expense">Expense</SelectItem>
-						<SelectItem value="income">Income</SelectItem>
+						<SelectItem className="hover:bg-gray-200" value="expense">
+							Expense
+						</SelectItem>
+						<SelectItem className="hover:bg-gray-200" value="income">
+							Income
+						</SelectItem>
 					</SelectContent>
 				</Select>
 			</div>
 
-			<Button variant={"outline"} className="hover:scale-105" type="submit">
+			<Button
+				variant={"outline"}
+				className="bg-black text-white/90 hover:bg-gray-800 hover:text-white"
+				type="submit"
+			>
 				Add Transaction
 			</Button>
 		</form>

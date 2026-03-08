@@ -34,35 +34,35 @@ export default function Page() {
 	return (
 		<main className="max-w-4xl mx-auto p-10 space-y-8">
 			{/* <div className="grid lg:grid-cols-4 gap-8"> */}
-				{/* Budget Summary Card */}
-				<div className="grid lg:col-span-2">
-					<BudgetSummaryCard
-						monthlyBudget={monthlyBudget}
-						income={income}
-						expenses={expenses}
-					/>
-				</div>
+			{/* Budget Summary Card */}
+			<div className="grid lg:col-span-2">
+				<BudgetSummaryCard
+					monthlyBudget={monthlyBudget}
+					income={income}
+					expenses={expenses}
+				/>
+			</div>
 
-				{/* Budget Manager */}
-				<Card className="grid lg:col-span-2">
-					<CardHeader>
-						<CardTitle>Budget Manager</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<BudgetManager
-							transactions={transactions}
-							budgets={budgets}
-							setBudget={setBudget}
-							monthlyBudget={monthlyBudget}
-							setMonthlyBudget={setMonthlyBudget}
-						/>
-					</CardContent>
-				</Card>
+			{/* Budget Manager */}
+			<Card className="grid lg:col-span-2">
+				<CardHeader>
+					<CardTitle>Budget Manager</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<BudgetManager
+						transactions={transactions}
+						budgets={budgets}
+						setBudget={setBudget}
+						monthlyBudget={monthlyBudget}
+						setMonthlyBudget={setMonthlyBudget}
+					/>
+				</CardContent>
+			</Card>
 			{/* </div> */}
 
 			{/* <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"> */}
-				{/* Expense Breakdown/piechart */}
-				{/* <Card className="">
+			{/* Expense Breakdown/piechart */}
+			{/* <Card className="">
 					<CardHeader>
 						<CardTitle>Expense Breakdown</CardTitle>
 					</CardHeader>
@@ -95,7 +95,7 @@ export default function Page() {
 
 			<Card>
 				<CardHeader>
-					<CardTitle>Recent Transactions</CardTitle>
+					<CardTitle>Monthly Transactions</CardTitle>
 					<MonthlyFilter month={month} setMonth={setMonth} />
 				</CardHeader>
 				<CardContent>
