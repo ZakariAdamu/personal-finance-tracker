@@ -1,3 +1,19 @@
+3. Brief explanation (in README):
+
+Project Brief
+1. This a Personal Finance Tracker Application
+2. This app was developed to enable users set budgets on personal areas/categories of needs and track expenses on each categories
+3. The Budget Manager section was setup as an input fields to allow users enter their budget categorically. Input fields are best for collecting/entering users data
+4. I also implemented a progress bar that allow users see their set budget and track spending along-side making it easy to visualize spending per budget for each category
+5. The progress bar was clearly distinguished with different colors for ease of understanding and to improve visual clarity at first glance
+6. Also implemented was a pie chart to track spending by category
+7. In addition, a table was implemented to clearly display transaction activities for each month
+8. User can filter table data by selecting a desired month to preview.
+What you'd improve with more time
+Any challenges you faced
+Time spent (approximately)
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
