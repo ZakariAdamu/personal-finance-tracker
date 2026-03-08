@@ -23,7 +23,7 @@
 ##### Q4. Time spent (approximately)
 1. The project took me less than a day, roughly 8 to 10 hours.
 
-   ```````````````````````````````````````````````````````````````````````````````````````````
+   ```
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
