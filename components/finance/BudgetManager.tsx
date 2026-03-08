@@ -110,10 +110,10 @@ export default function BudgetManager({
 					<SelectContent
 						position="popper"
 						sideOffset={8}
-						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-popover backdrop-blur-sm shadow-xl supports-[backdrop-filter]:bg-popover"
+						className="z-[60] w-[--radix-select-trigger-width] border border-border bg-white shadow-xl supports-[backdrop-filter]:bg-popover"
 					>
 						{FINANCE_CATEGORIES.map((category) => (
-							<SelectItem key={category} value={category}>
+							<SelectItem className="hover:bg-gray-200" key={category} value={category}>
 								{category}
 							</SelectItem>
 						))}
@@ -126,7 +126,11 @@ export default function BudgetManager({
 					placeholder="Category budget limit"
 				/>
 
-				<Button variant="outline" className="hover:scale-105" type="submit">
+				<Button
+					variant="outline"
+					className="bg-black text-white/90 hover:bg-gray-800 hover:text-white"
+					type="submit"
+				>
 					Add Category Budget
 				</Button>
 			</form>
