@@ -1,14 +1,38 @@
 ##### Q1. Brief explanation (in README):
 
 ## Project Features
-1. This a Personal Finance Tracker Application
-2. This app was developed to enable users set budgets on personal areas/categories of needs and track expenses on each categories
-3. The Budget Manager section was setup as an input fields to allow users enter their budget categorically. form fields are best for collecting/entering users data
-4. I also implemented a progress bar that allow users see their set budget and track spending along-side making it easy to visualize spending per budget for each category
-5. The progress bar was clearly distinguished with different colors for ease of understanding and to improve visual clarity at first glance
-6. Also implemented was a pie chart to track spending by category
-7. In addition, a table was implemented to clearly display transaction activities for each month
-8. User can filter table data by selecting a desired month to preview.
+1. Personal Finance Tracker <br/>
+This application helps users manage their personal finances by tracking monthly income and expenses across multiple categories.
+
+2. Category-Based Budgeting <br/>
+Users can define budgets for different spending categories (e.g., housing, food, transportation, entertainment, utilities) and monitor how their expenses compare to their allocated budgets.
+
+3. Budget Manager Input Form <br/>
+A dedicated Budget Manager section allows users to set category budgets using structured input fields. Forms provide an efficient and user-friendly way to collect and manage user data.
+
+4. Date Picker for Transactions <br/>
+A date picker component is implemented to simplify date selection and reduce input errors, providing a more convenient alternative to manually entering transaction dates.
+
+5. Budget Progress Tracking <br/>
+A dynamic progress bar displays the relationship between the user’s set budget and their current spending, making it easy to visualize how much of each category budget has been used.
+
+6. Color-Based Spending Indicators <br/>
+Progress bars use color indicators to quickly communicate budget health:
+
+🟢 Green – spending is within a safe range
+
+🟡 Yellow – spending is approaching the budget limit
+
+🔴 Red – spending is near or exceeding the budget limit
+
+7. Spending Visualization with Pie Chart <br/>
+A pie chart visualization provides an overview of how expenses are distributed across different categories, helping users better understand their spending patterns.
+
+8. Monthly Transaction Table <br/>
+All financial activities are displayed in a structured table, allowing users to easily review and track their recorded transactions.
+
+9. Monthly Data Filtering <br/>
+Users can filter transaction records by month, enabling them to quickly view and analyze financial activities for a specific time period.
 
 ##### Q2. What you'd improve with more time
 1. With more time I could implement the following:
