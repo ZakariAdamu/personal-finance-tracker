@@ -16,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Monthly Finance Tracker",
-	description:
-		"A simple finance tracking app to track your monthly income and expenses, visualize spending, and manage budgets.",
+	title: "Personal Finance Tracker",
+	description: "Track your personal finances with ease",
 };
 
 export default function RootLayout({
