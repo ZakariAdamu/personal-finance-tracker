@@ -3,7 +3,7 @@
 ## Project Features
 1. This a Personal Finance Tracker Application
 2. This app was developed to enable users set budgets on personal areas/categories of needs and track expenses on each categories
-3. The Budget Manager section was setup as an input fields to allow users enter their budget categorically. Input fields are best for collecting/entering users data
+3. The Budget Manager section was setup as an input fields to allow users enter their budget categorically. form fields are best for collecting/entering users data
 4. I also implemented a progress bar that allow users see their set budget and track spending along-side making it easy to visualize spending per budget for each category
 5. The progress bar was clearly distinguished with different colors for ease of understanding and to improve visual clarity at first glance
 6. Also implemented was a pie chart to track spending by category
