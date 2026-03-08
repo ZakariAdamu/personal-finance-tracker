@@ -10,17 +10,17 @@ Q1. Brief explanation (in README):
 7. In addition, a table was implemented to clearly display transaction activities for each month
 8. User can filter table data by selecting a desired month to preview.
 
-Q2. What you'd improve with more time
+##### Q2. What you'd improve with more time
 1. With more time I could implement the following:
 2. A Theme switcher to enable switching between light and dark mode
 3. Connect data to a backend API for improved performance
 4. User authentication for personalized usage
 5. Share the app with real users, request user feedback and optimize further based on approved feedback
    
-Q3. Any challenges you faced
+##### Q3. Any challenges you faced
 1. A major challenge faced was linked to the implementation of the dynamic progress bars for each budget category
 
-Q4. Time spent (approximately)
+##### Q4. Time spent (approximately)
 1. The project took me less than a day, roughly 8 to 10 hours.
 
 
