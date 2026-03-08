@@ -1,4 +1,4 @@
-Q1. Brief explanation (in README):
+##### Q1. Brief explanation (in README):
 
 ## Project Features
 1. This a Personal Finance Tracker Application
