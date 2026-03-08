@@ -35,17 +35,26 @@ All financial activities are displayed in a structured table, allowing users to 
 Users can filter transaction records by month, enabling them to quickly view and analyze financial activities for a specific time period.
 
 ##### Q2. What you'd improve with more time
-1. With more time I could implement the following:
-2. A Theme switcher to enable switching between light and dark mode
-3. Connect data to a backend API for improved performance
-4. User authentication for personalized usage
-5. Share the app with real users, request user feedback and optimize further based on approved feedback
+1. Theme Switcher (Light/Dark Mode) <br/>
+Implement a theme toggle to allow users switch between light and dark modes, improving accessibility and user comfort across different environments.
+
+2. Backend Integration <br/>
+Replace localStorage with a backend API and database to enable reliable data persistence, improved performance, and support for multi-device access.
+
+3. User Authentication <br/>
+Introduce user authentication and account management, allowing users to securely store and access their financial data in a personalized environment.
+
+4. User Testing and Feedback Loop <br/>
+Deploy the application to real users, collect user feedback, and iterate on the design and features based on validated user insights to improve usability and product value.
+
+5. Advanced Financial Insights <br/>
+Add analytics features such as monthly spending trends, savings insights, and predictive budgeting, helping users make more informed financial decisions.
    
 ##### Q3. Any challenges you faced
 1. A major challenge faced was linked to the implementation of the dynamic progress bars for each budget category
 
 ##### Q4. Time spent (approximately)
-1. The project took me less than a day, roughly 8 to 10 hours.
+1. The project took me less than 24 hours to complete.
 
    ___
 
